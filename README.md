@@ -1,5 +1,5 @@
 # Ayush Tiwari
-xxayushtiwarixx@gmail.com | +91 9450595496 | Greater Noida | [Portfolio](https://ayushtiwari.dev) | [Github](https://github.com/XxAlonexX)
+xxayushtiwarixx@gmail.com | +91 9450595496 | Greater Noida | [Portfolio](https://ayushxtiwari.netlify.app) | [Github](https://github.com/XxAlonexX)
 
 ## EDUCATION
 **Noida Institute Of Engineering And Technology, Greater Noida**  
