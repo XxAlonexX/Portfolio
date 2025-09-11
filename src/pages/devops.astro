@@ -1,0 +1,78 @@
+---
+import Header from '../components/Header.astro';
+import Project from "../components/Project.astro";
+import Sidebar from "../components/Sidebar.astro";
+const projects = [
+    {
+    title: "Unity Game Developer Intern @FlashSkool",
+    desc: [
+      "Developed NPC and enemy AI with dynamic attacks and events to enhance player engagement",
+      "Created realistic interactions between game objects using advanced scripting techniques",
+      "Implemented complex game mechanics and player progression systems",
+      "Optimized game performance and memory usage for smooth gameplay experience"
+    ],
+    tech: ["Unity 3D", "C#", "Game AI", "NPC Development", "Game Mechanics", "Performance Optimization"]
+  },
+  {
+    title: "3D Character Creation - Amshani & Hina",
+    desc: [
+      "Created anime-style characters Amshani and Hina using Blender, mastering modeling and rigging techniques",
+      "Explored artistic nuances of anime aesthetics in 3D, refining textures and character expressions",
+      "Developed detailed character models with proper topology for animation and game integration",
+      "Implemented advanced rigging systems for realistic character movement and expressions"
+    ],
+    tech: ["Blender 3D", "3D Modeling", "Rigging", "Texturing", "Animation"],
+    link: "https://github.com/XxAlonexX/Blender-Character"
+  },
+  {
+    title: "Unreal Engine Environment Design",
+    desc: [
+      "Developed a detailed 3D environment in Unreal Engine, integrating Nanite for high-poly optimization",
+      "Designed complex structures with realistic lighting to emphasize geometry and form",
+      "Implemented advanced lighting techniques and post-processing effects for immersive visuals",
+      "Created interactive elements and optimized performance for real-time rendering"
+    ],
+    tech: ["Unreal Engine", "Nanite", "C++", "Level Design", "Lighting", "Optimization"],
+    link: "https://github.com/XxAlonexX/Act_III"
+  }
+
+];
+---
+
+<!DOCTYPE html>
+<html
+>
+  <Header title="3D Development & Game Design | Ayush Tiwari" />
+  <body>
+    <div class="content">
+        <Sidebar selectedItem="devops" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a href="/" class="back-nav-button w-inline-block"
+              ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>3D Development & Game Design</h1>
+            <section class="items-container">
+                <div class="resouce-items">
+                    {projects.map(project => (
+                      <Project 
+                        title={project.title} 
+                        desc={project.desc}
+                        tech={project.tech}
+                        link={project.link}
+                      />
+                    ))}
+                  </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>

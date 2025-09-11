@@ -1,0 +1,72 @@
+---
+import Header from "../components/Header.astro";
+import Project from "../components/Project.astro";
+import Sidebar from "../components/Sidebar.astro";
+const projects = [
+  {
+    title: "SDE Intern @Simule",
+    desc: [
+      "Developed and deployed Solidity-based smart contracts for decentralized applications (dApps).",
+      "Created an interactive map-based interface for visualizing and trading digital land parcels with coordinates (X,Y,Z)",
+      "Built a full-stack blockchain solution using Node.js (backend) and React.js (frontend).",
+      "Integrated MetaMask and multi-wallet support, enabling secure blockchain transactions within the app."
+    ],
+    tech: ["Solidity", "React", "MongoDB", "OpenZeppelin", "ERC1155", "ERC20"]
+  },
+    {
+    title: "Web Developer Intern @FlashSkool",
+    desc: [
+      "Created Hugo theme for the company's official website where content can be managed directly from the markdowns available on their GitHub profile",
+      "Implemented responsive design and content management system integration",
+      "Optimized for performance and SEO best practices"
+    ],
+    tech: ["Hugo", "Markdown", "GitHub", "Responsive Design", "SEO"]
+  },
+  {
+    title: "Flutter Developer Intern @FlashSkool",
+    desc: [
+      "Developed the frontend of a ride-hailing  mobile application using Flutter.",
+      "Integrated frontend UI components with existing backend APIs and business logic, ensuring seamless functionality.",
+      "Implemented real-time ride booking, navigation, and user interaction flows to enhance app usability."
+    ],
+    tech: ["Flutter", "Dart", "Firebase", "Cross-platform"]
+  }
+];
+---
+
+<!DOCTYPE html>
+<html
+>
+  <Header title="Software Development | Ayush Tiwari" />
+  <body>
+    <div class="content">
+        <Sidebar selectedItem="software-development" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a href="/" class="back-nav-button w-inline-block"
+              ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>Software Development</h1>
+            <section class="items-container">
+                <div class="resouce-items">
+                    {projects.map(project => (
+                      <Project 
+                        title={project.title} 
+                        desc={project.desc}
+                        tech={project.tech}
+                      />
+                    ))}
+                  </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>

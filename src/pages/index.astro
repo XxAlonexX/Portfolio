@@ -1,0 +1,102 @@
+---
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+---
+
+
+<!DOCTYPE html>
+<html
+>
+  <Header title="Ayush Tiwari" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="home" />
+      <nav class="main">
+        <div class="container">
+          <main class="fold-content-container">
+            <div class="fold-content">
+              <h1>Hi, I'm Ayush.<br />I build Stuff.</h1>
+              <p class="lead">
+                Computer Science student passionate about 3D development, game design, and blockchain technology. 
+                Rank holder in Google Kickstart 2022, experienced in Unity, Unreal Engine, Flutter, and smart contracts. 
+                Dedicated to creating engaging digital experiences and contributing to open source projects.
+              </p>
+            </div>
+            <div class="button-container">
+              <a href="mailto:xxayushtiwarixx@outlook.com" class="button w-button">Contact</a>
+              <a href="https://drive.google.com/file/d/1Y8VabDkso02WgHHl1490CZvqadMHuqEn/view?usp=sharing" class="button w-button">Resume</a>
+            </div>
+          </main>
+          <div class="projects-section">
+            <!-- Software Development -->
+            <a href="/software-development" class="projects-container">
+              <div class="single-projects-category">
+                <div class="projects-category-image-container">
+                  <img src="./assets/browser.svg" loading="lazy" alt="" class="projects-category-image" />
+                </div>
+              </div>
+              <div class="single-projects-content">
+                <h4>Software Development</h4>
+                <div class="tech-tools-container">
+                  <div class="mini-label-white gray-color">Technologies &amp; tools</div>
+                  <div class="chips-container chips-container-small-width">
+                    <div class="single-chip small-chip">JavaScript</div>
+                    <div class="single-chip small-chip">TypeScript</div>
+                    <div class="single-chip small-chip">React</div>
+                    <div class="single-chip small-chip">Flutter</div>
+                    <div class="single-chip small-chip">Dart</div>
+                    <div class="single-chip small-chip">Firebase</div>
+                    <div class="single-chip small-chip">C++</div>
+                    <div class="single-chip small-chip">Python</div>
+                    <div class="single-chip small-chip">Java</div>
+                    <div class="single-chip small-chip">Kotlin</div>
+                    <div class="single-chip small-chip">PHP</div>
+                    <div class="single-chip small-chip">MySQL</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- 3D Development & Game Design -->
+            <a href="/devops" class="projects-container">
+              <div class="single-projects-category">
+                <div class="projects-category-image-container devops-img">
+                  <img src="./assets/database.svg" loading="lazy" alt="" class="projects-category-image" />
+                </div>
+              </div>
+              <div class="single-projects-content">
+                <h4>3D Development &amp;&nbsp;Game Design</h4>
+                <div class="tech-tools-container">
+                  <div class="mini-label-white gray-color">Technologies &amp; tools</div>
+                  <div class="chips-container chips-container-small-width">
+                    <div class="single-chip small-chip">Unreal Engine</div>
+                    <div class="single-chip small-chip">Unity 3D</div>
+                    <div class="single-chip small-chip">Blender 3D</div>
+                    <div class="single-chip small-chip">C#</div>
+                    <div class="single-chip small-chip">C++</div>
+                    <div class="single-chip small-chip">Nanite</div>
+                    <div class="single-chip small-chip">3D Modeling</div>
+                    <div class="single-chip small-chip">Rigging</div>
+                    <div class="single-chip small-chip">Animation</div>
+                    <div class="single-chip small-chip">Game AI</div>
+                    <div class="single-chip small-chip">NPC Development</div>
+                    <div class="single-chip small-chip">Level Design</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>
+
+<style>
+  .button-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+</style>

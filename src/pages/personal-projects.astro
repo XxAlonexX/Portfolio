@@ -1,0 +1,73 @@
+---
+import Header from '../components/Header.astro';
+import Project from '../components/Project.astro';
+import Sidebar from '../components/Sidebar.astro';
+const projects = [
+  {
+    title: "Open Source Contributions",
+    desc: [
+      "Contributor in multiple Open Source projects, including DeepSeek V3 (GitHub)",
+      "Active participant in the open source community, contributing to various projects",
+      "Collaborated with developers worldwide to improve software and tools"
+    ],
+    tech: ["GitHub", "Open Source", "Collaboration", "Community"]
+  },
+  {
+    title: "Competitive Programming",
+    desc: [
+      "Rank Holder in Google Kickstart (Global) 2022",
+      "7th Rank in GFG Summer Break Challenge 2022",
+      "Secured 11th Rank in GFG Summer Break Challenge 2023",
+      "Consistent participation in coding competitions and algorithmic challenges"
+    ],
+    tech: ["C++", "Python", "Algorithms", "Data Structures", "Problem Solving"]
+  },
+  {
+    title: "Portfolio Website",
+    desc: [
+      "Developed this responsive portfolio website using Astro and modern web technologies",
+      "Implemented clean UI/UX design with smooth animations and transitions",
+      "Optimized for performance and SEO best practices",
+      "Mobile-first responsive design approach"
+    ],
+    tech: ["Astro", "JavaScript", "CSS", "Responsive Design", "SEO"]
+  }
+];
+---
+
+<!DOCTYPE html>
+<html
+>
+  <Header title="Personal Projects | Ayush Tiwari" />
+  <body>
+    <div class="content">
+        <Sidebar selectedItem="personal-projects" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a href="/" class="back-nav-button w-inline-block"
+              ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>Personal Projects</h1>
+            <section class="items-container">
+                <div class="resouce-items">
+                    {projects.map(project => (
+                      <Project 
+                        title={project.title} 
+                        desc={project.desc}
+                        tech={project.tech}
+                      />
+                    ))}
+                  </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>
